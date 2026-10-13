@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Register</title>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="spinner">Cargando...</div>
+    </div>
+
+    <!-- Header Principal -->
+    <header>
+        <h1>Register</h1>
+        <button class="toggle-button" id="toggle-button" aria-label="Menú de navegación"></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Login</a></li>
+                <li><a href="register.html" class="active">Register</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulario de Registro -->
+    <div class="login-container">
+        <form action="/register" method="POST">
+            
+            <div class="form-title">
+                <h2>Crea tu cuenta</h2>
+                <p>Ingresa tus datos para completar el registro.</p>
+            </div>
+
+            <div class="validation-message" id="validation-message"></div>
+
+            <label for="Nombre Completo">Nombre completo:</label>
+            <input 
+                type="text" 
+                id="Nombre Completo" 
+                name="Nombre Completo" 
+                placeholder="Ej. Andres Capera" 
+                autocomplete="name"
+                required>
+
+            <label for="email">Email:</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="correo@ejemplo.com" 
+                autocomplete="email"
+                required>
+
+            <label for="Nombre de usuario">Nombre de usuario:</label>
+            <input 
+                type="text" 
+                id="Nombre de usuario" 
+                name="Nombre de usuario" 
+                pattern="^[a-zA-Z0-9_]{4,20}$"
+                title="Debe tener 4-20 caracteres, solo letras, números y/o guiones bajos"
+                placeholder="Nombre de usuario" 
+                autocomplete="Nombre de usuario"
+                required>
+
+            <label for="Contraseña">Contraseña:</label>
+            <input 
+                type="Contraseña" 
+                id="Contraseña" 
+                name="Contraseña" 
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$"
+                title="Debe tener al menos una letra minúscula, una letra mayúscula y un número"
+                placeholder="Contraseña" 
+                autocomplete="Nueva-contraseña"
+                required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Script de lógica -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
